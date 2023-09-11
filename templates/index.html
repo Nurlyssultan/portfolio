@@ -8,7 +8,7 @@
     <title>Live Resume :: Home</title>
     <link href="https://fonts.googleapis.com/css?family=Mukta:300,400,500,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet"
-        href="{{ url_for('static', filename='assets/vendors/@fortawesome/fontawesome-free/css/all.min.css')}} ">
+        href="{{url_for('static', filename='assets/vendors/@fortawesome/fontawesome-free/css/all.min.css')}} ">
     <link rel="stylesheet" href="{{url_for('static', filename='assets/css/live-resume.css')}}">
 </head>
 
@@ -19,10 +19,10 @@
             SHARE</button>
         <nav class="collapsible-nav" id="collapsible-nav">
             <a href="{{ url_for('get_index') }}" class="nav-link active">HOME</a>
-            <a href="{{ url_for('contact') }}" class="nav-link">RESUME</a>
+            <a href="{{ url_for('get_resume') }}" class="nav-link">RESUME</a>
             <a href="{{ url_for('get_portfolio') }}" class="nav-link">PORTFOLIO</a>
             <a href="{{ url_for('get_blog') }}" class="nav-link">BLOG</a>
-            <a href="{{ url_for('contact') }}" class="nav-link">CONTACT</a>
+            <a href="{{ url_for('get_contact') }}" class="nav-link">CONTACT</a>
         </nav>
         <button class="btn btn-menu-toggle btn-white rounded-circle" data-toggle="collapsible-nav"
             data-target="collapsible-nav"><img src="{{url_for('static', filename='assets/images/hamburger.svg')}}"
@@ -53,7 +53,7 @@
                     <p>MAIL : nurlyssultan.sabitov@gmail.com</p>
                     <p>Location : Almaty, KZ</p>
                     <button class="btn btn-download-cv btn-primary rounded-pill"> <img
-                            src="{{url_for('static', filename='assets/images/download.svg')}} " alt="download"
+                            src="{{url_for('static', filename='assets/images/download.svg')}}" alt="download"
                             class="btn-img">DOWNLOAD CV </button>
                 </div>
             </div>

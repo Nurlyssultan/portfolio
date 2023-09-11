@@ -15,7 +15,7 @@ def get_blog():
 
 
 @app.route('/contact')
-def contact():
+def get_contact():
     return render_template('contact.html')
 
 
