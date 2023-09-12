@@ -7,33 +7,35 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Live Resume :: Resume</title>
     <link href="https://fonts.googleapis.com/css?family=Mukta:300,400,500,600,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/vendors/@fortawesome/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/live-resume.css">
+    <link rel="stylesheet"
+        href="{{url_for('static', filename='assets/vendors/@fortawesome/fontawesome-free/css/all.min.css')}} ">
+    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/live-resume.css')}}">
 </head>
 
 <body>
     <header>
-        <button class="btn btn-white btn-share ml-auto mr-3 ml-md-0 mr-md-auto"><img src="assets/images/share.svg"
-                alt="share" class="btn-img">
+        <button class="btn btn-white btn-share ml-auto mr-3 ml-md-0 mr-md-auto"><img
+                src="{{url_for('static', filename='assets/images/share.svg')}}" alt="share" class="btn-img">
             SHARE</button>
         <nav class="collapsible-nav" id="collapsible-nav">
-            <a href="index.html" class="nav-link">HOME</a>
-            <a href="resume.html" class="nav-link active">RESUME</a>
-            <a href="portfolio.html" class="nav-link">PORTFOLIO</a>
-            <a href="blog.html" class="nav-link">BLOG</a>
-            <a href="contact.html" class="nav-link">CONTACT</a>
+            <a href="{{ url_for('get_index') }}" class="nav-link">HOME</a>
+            <a href="{{ url_for('get_resume') }}" class="nav-link active">RESUME</a>
+            <a href="{{ url_for('get_portfolio') }}" class="nav-link">PORTFOLIO</a>
+            <a href="{{ url_for('get_blog') }}" class="nav-link">BLOG</a>
+            <a href="{{ url_for('get_contact') }}" class="nav-link">CONTACT</a>
         </nav>
         <button class="btn btn-menu-toggle btn-white rounded-circle" data-toggle="collapsible-nav"
-            data-target="collapsible-nav"><img src="assets/images/hamburger.svg" alt="hamburger"></button>
+            data-target="collapsible-nav"><img src="{{url_for('static', filename='assets/images/hamburger.svg')}}"
+                alt="hamburger"></button>
     </header>
     <div class="content-wrapper">
         <aside>
             <div class="profile-img-wrapper">
-                <img src="assets/images/Profile.png" alt="profile">
+                <img src="{{url_for('static', filename='assets/images/Profile.png')}}" alt="profile">
             </div>
             <h1 class="profile-name">Nurlyssultan Sabitov</h1>
             <div class="text-center">
-                <span class="badge badge-white badge-pill profile-designation">UI / UX Designer</span>
+                <span class="badge badge-white badge-pill profile-designation">Python Data Analyst</span>
             </div>
             <nav class="social-links">
                 <a href="#!" class="social-link"><i class="fab fa-facebook-f"></i></a>
@@ -45,22 +47,23 @@
             <div class="widget">
                 <h5 class="widget-title">personal information</h5>
                 <div class="widget-content">
-                    <p>BIRTHDAY : 15 April 1990</p>
+                    <p>BIRTHDAY : 1 January 1995</p>
                     <p>WEBSITE : www.example.com</p>
-                    <p>PHONE : +1 123 000 4444</p>
-                    <p>MAIL : your@example.com</p>
-                    <p>Location : California, USA</p>
-                    <button class="btn btn-download-cv btn-primary rounded-pill"> <img src="assets/images/download.svg"
-                            alt="download" class="btn-img">DOWNLOAD CV </button>
+                    <p>PHONE : +7 707 710 0550</p>
+                    <p>MAIL : nurlyssultan.sabitov@gmail.com</p>
+                    <p>Location : Almaty, KZ</p>
+                    <button class="btn btn-download-cv btn-primary rounded-pill"> <img
+                            src="{{url_for('static', filename='assets/images/download.svg')}}" alt="download"
+                            class="btn-img">DOWNLOAD CV </button>
                 </div>
             </div>
             <div class="widget card">
                 <div class="card-body">
                     <div class="widget-content">
                         <h5 class="widget-title card-title">LANGUAGES</h5>
-                        <p>English : native</p>
-                        <p>Spanish : fluent</p>
-                        <p>Italian : fluent</p>
+                        <p>Kazakh : native</p>
+                        <p>Russian : fluent</p>
+                        <p>English : advanced</p>
                     </div>
                 </div>
             </div>
@@ -68,9 +71,9 @@
                 <div class="card-body">
                     <div class="widget-content">
                         <h5 class="widget-title card-title">INTERESTS</h5>
-                        <p>Video games</p>
+                        <p>Movies</p>
                         <p>Finance</p>
-                        <p>Basketball</p>
+                        <p>Data Science</p>
                         <p>Theatre</p>
                     </div>
                 </div>
@@ -146,10 +149,14 @@
                 <h6 class="section-subtitle">WHAT I DO</h6>
                 <h2 class="section-title">CLIENTS</h2>
                 <div class="client-logos-wrapper">
-                    <div class="client-logo"><img src="assets/images/Clients_1.svg" alt="logo" class="w-100"></div>
-                    <div class="client-logo"><img src="assets/images/Clients_2.svg" alt="logo" class="w-100"></div>
-                    <div class="client-logo"><img src="assets/images/Clients_3.svg" alt="logo" class="w-100"></div>
-                    <div class="client-logo"><img src="assets/images/Clients_4.svg" alt="logo" class="w-100"></div>
+                    <div class="client-logo"><img src="{{url_for('static', filename='assets/images/Clients_1.svg')}} "
+                            alt="logo" class="w-100"></div>
+                    <div class="client-logo"><img src="{{url_for('static', filename='assets/images/Clients_2.svg')}} "
+                            alt="logo" class="w-100"></div>
+                    <div class="client-logo"><img src="{{url_for('static', filename='assets/images/Clients_3.svg')}} "
+                            alt="logo" class="w-100"></div>
+                    <div class="client-logo"><img src="{{url_for('static', filename='assets/images/Clients_4.svg')}} "
+                            alt="logo" class="w-100"></div>
                 </div>
             </section>
             <section class="services-section">
@@ -158,7 +165,7 @@
                 <div class="row">
                     <div class="media service-card col-lg-6">
                         <div class="service-icon">
-                            <img src="assets/images/001-target.svg" alt="target">
+                            <img src="{{url_for('static', filename='assets/images/001-target.svg')}} " alt="target">
                         </div>
                         <div class="media-body">
                             <h5 class="service-title">web designing</h5>
@@ -169,7 +176,7 @@
                     </div>
                     <div class="media service-card col-lg-6">
                         <div class="service-icon">
-                            <img src="assets/images/003-idea.svg" alt="bulb">
+                            <img src="{{url_for('static', filename='assets/images/003-idea.svg')}} " alt="bulb">
                         </div>
                         <div class="media-body">
                             <h5 class="service-title">Graphic design</h5>
@@ -181,7 +188,8 @@
                     </div>
                     <div class="media service-card col-lg-6">
                         <div class="service-icon">
-                            <img src="assets/images/002-development.svg" alt="development">
+                            <img src="{{url_for('static', filename='assets/images/002-development.svg')}} "
+                                alt="development">
                         </div>
                         <div class="media-body">
                             <h5 class="service-title">Development</h5>
@@ -193,7 +201,8 @@
                     </div>
                     <div class="media service-card col-lg-6">
                         <div class="service-icon">
-                            <img src="assets/images/004-smartphone.svg" alt="smartphone">
+                            <img src="{{url_for('static', filename='assets/images/004-smartphone.svg')}} "
+                                alt="smartphone">
                         </div>
                         <div class="media-body">
                             <h5 class="service-title">Mobile design</h5>
@@ -210,21 +219,24 @@
                 <h2 class="section-title">ACHIEVEMENTS</h2>
                 <div class="achievement-cards-wrapper">
                     <div class="media achievement-card">
-                        <img src="assets/images/puzzle.svg" alt="puzzle" class="achievement-card-icon">
+                        <img src="{{url_for('static', filename='assets/images/puzzle.svg')}} " alt="puzzle"
+                            class="achievement-card-icon">
                         <div class="media-body">
                             <h4 class="achievement-card-title">550+</h4>
                             <p class="achievement-card-description">COMPLETED PROJECTS</p>
                         </div>
                     </div>
                     <div class="media achievement-card">
-                        <img src="assets/images/team.svg" alt="puzzle" class="achievement-card-icon">
+                        <img src="{{url_for('static', filename='assets/images/team.svg')}} " alt="puzzle"
+                            class="achievement-card-icon">
                         <div class="media-body">
                             <h4 class="achievement-card-title">23K</h4>
                             <p class="achievement-card-description">HAPPY CLIENTS</p>
                         </div>
                     </div>
                     <div class="media achievement-card">
-                        <img src="assets/images/trophy.svg" alt="puzzle" class="achievement-card-icon">
+                        <img src="{{url_for('static', filename='assets/images/trophy.svg')}} " alt="puzzle"
+                            class="achievement-card-icon">
                         <div class="media-body">
                             <h4 class="achievement-card-title">55</h4>
                             <p class="achievement-card-description">AWARDS RECIEVED</p>
@@ -238,19 +250,22 @@
                         <div class="carousel-item active">
                             <p class="testimonial-content">Mauris magna sapien, pharetra consectetur fringilla vitae,
                                 interdum sed tortor.</p>
-                            <img src="assets/images/Profile.png" alt="profile" class="testimonial-img">
+                            <img src="{{url_for('static', filename='assets/images/Profile.png')}} " alt="profile"
+                                class="testimonial-img">
                             <p class="testimonial-name">Nout Golstein</p>
                         </div>
                         <div class="carousel-item">
                             <p class="testimonial-content">Mauris magna sapien, pharetra consectetur fringilla vitae,
                                 interdum sed tortor.</p>
-                            <img src="assets/images/Profile.png" alt="profile" class="testimonial-img">
+                            <img src="{{url_for('static', filename='assets/images/Profile.png')}} " alt="profile"
+                                class="testimonial-img">
                             <p class="testimonial-name">Nout Golstein</p>
                         </div>
                         <div class="carousel-item">
                             <p class="testimonial-content">Mauris magna sapien, pharetra consectetur fringilla vitae,
                                 interdum sed tortor.</p>
-                            <img src="assets/images/Profile.png" alt="profile" class="testimonial-img">
+                            <img src="{{url_for('static', filename='assets/images/Profile.png')}} " alt="profile"
+                                class="testimonial-img">
                             <p class="testimonial-name">Nout Golstein</p>
                         </div>
                     </div>
@@ -266,10 +281,10 @@
                     rel="noopener noreferrer">BootstrapDash</a>. All Rights Reserved 2020</footer>
         </main>
     </div>
-    <script src="assets/vendors/jquery/dist/jquery.min.js"></script>
-    <script src="assets/vendors/@popperjs/core/dist/umd/popper-base.min.js"></script>
-    <script src="assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="assets/js/live-resume.js"></script>
+    <script src="{{url_for('static', filename='assets/vendors/jquery/dist/jquery.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/vendors/@popperjs/core/dist/umd/popper-base.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/vendors/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/js/live-resume.js')}} "></script>
 </body>
 
 </html>
